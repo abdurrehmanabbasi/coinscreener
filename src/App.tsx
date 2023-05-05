@@ -1,9 +1,9 @@
 import { Routes,Route } from "react-router-dom"
-import Layout from "./components/Layout"
-import Home from "./components/Home"
-import About from "./components/About"
-import Coins from "./components/Coins"
-import Coin from "./components/Coin"
+import Layout from "./pages/Layout"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Coins from "./pages/Coins"
+import Coin from "./pages/Coin"
 
 // const url = "wss://stream.binance.com:9443/ws/!miniTicker@arr"
 const App = () => {

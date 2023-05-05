@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { useGetCoinsQuery } from "../services/cryptoApi";
-import formatNumber from "../utils/formatNumber";
+import { useGetCoinsQuery } from "../../services/cryptoApi";
+import formatNumber from "../../utils/formatNumber";
 
 const Coins = () => {
     const { data,isFetching } = useGetCoinsQuery({})

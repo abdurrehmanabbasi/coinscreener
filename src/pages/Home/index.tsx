@@ -1,6 +1,6 @@
-import cimg from "../assets/cimg.png"
-import { useGetGlobalQuery } from "../services/cryptoApi"
-import formatNumber from "../utils/formatNumber"
+import cimg from "../../assets/cimg.png"
+import { useGetGlobalQuery } from "../../services/cryptoApi"
+import formatNumber from "../../utils/formatNumber"
 import Stats from "./Stats"
 
 const Home = () => {
