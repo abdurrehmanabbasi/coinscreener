@@ -32,18 +32,12 @@ const options = {
 
     responsive: true,
     plugins: {
-        legend: {
-            position: 'top' as const,
-        },
-        title: {
-            display: true,
-            text: 'Price Chart',
-        },
+        
     },
 }
 export function LineChart({ id }: Props) {
     const { data, isFetching } = useGetChartDataQuery(id)
-    const coinChartData = data?.prices.map((value: number[]) => ({ x: value[0], y: value[1].toFixed(2) }))
+    const coinChartData = data?.prices.map((value: number[]) => ({ x: value[0], y: value[1].toFixed(4) }))
 
     return (
         <>

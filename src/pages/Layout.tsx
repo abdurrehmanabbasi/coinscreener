@@ -15,13 +15,12 @@ const Layout = () => {
         <nav className='hidden md:flex font-thin px-4 py-2 gap-x-2 '>
           <NavLink to={"/"} className={({ isActive }) => `p-2 rounded-md ${isActive ? 'bg-sky-500' : ''} `}>Home</NavLink>
           <NavLink to={"/coins"} className={({ isActive }) => `p-2 rounded-md ${isActive ? 'bg-sky-500' : ''} `}>Market</NavLink>
-          <NavLink to={"/news"} className={({ isActive }) => `p-2 rounded-md ${isActive ? 'bg-sky-500' : ''} `}>News</NavLink>
+          <NavLink to={"/watchlist"} className={({ isActive }) => `p-2 rounded-md ${isActive ? 'bg-sky-500' : ''} `}>Watchlist</NavLink>
           <NavLink to={"/about"} className={({ isActive }) => `p-2 rounded-md ${isActive ? 'bg-sky-500' : ''} `}>About</NavLink>
 
         </nav>
 
         <div className='px-4 flex items-center'>
-          <UserIcon className='w-8 rounded-full bg-sky-500 p-2' /><span className='font-mono px-2 lg:block hidden '>Username</span>
         </div>
       </header>
       <main className="flex-grow container mx-auto px-4 py-4">

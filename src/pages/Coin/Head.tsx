@@ -24,7 +24,7 @@ const Head = ({ rank, name, symbol, currentprice, changepercentage, low, high, m
                 <p className="opacity-50">{symbol.toLocaleUpperCase()}</p>
             </div>
             <div className="flex gap-x-2 items-baseline">
-                <span className="text-3xl">{millify(currentprice) }</span>
+                <span className="text-3xl">${currentprice}</span>
                 {changepercentage > 0 ? <span className="flex items-baseline text-green-500"><ArrowUpIcon className="w-3" /> {changepercentage}</span>
                     : <span className="flex items-baseline text-red-500"><ArrowDownIcon className="w-3" /> {changepercentage}</span>}
             </div>
@@ -39,6 +39,7 @@ const Head = ({ rank, name, symbol, currentprice, changepercentage, low, high, m
 
 
         <div className="flex flex-col w-full lg:w-1/2">
+            <p className="font-bold underline">Market Summary</p>
             <div className="flex justify-between border-b-2 p-1 w-full lg:w-2/3">
                 <span className="opacity-75">Market Cap</span>
                 <span className="font-bold">${millify( mktcap,{precision:3,space:true})}</span>

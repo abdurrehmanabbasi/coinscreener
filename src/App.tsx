@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Coins from "./pages/Coins"
 import Coin from "./pages/Coin"
+import Watchlist from "./pages/Watchlist"
 
 // const url = "wss://stream.binance.com:9443/ws/!miniTicker@arr"
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/market" element={<Home/>}/>
         <Route path="/coins" element={<Coins/>}/>
         <Route path="/coin/:id" element={<Coin/>}/>
+        <Route path="/watchlist" element={<Watchlist/>}/>
         <Route path="/about" element={<About/>}/>
       </Route>
     </Routes>
