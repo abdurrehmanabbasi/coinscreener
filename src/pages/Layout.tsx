@@ -6,7 +6,7 @@ import { Bars3Icon } from '@heroicons/react/20/solid';
 const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen bg-slate-800 text-white">
-      <header className="flex justify-between items-center ">
+      <header className="flex justify-between items-center sticky top-0 bg-slate-800">
         <Bars3Icon className='block md:hidden w-12 px-2 text-sky-500' />
 
         <div className=" px-4 py-4">

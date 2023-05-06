@@ -15,10 +15,13 @@ export const cryptoApi = createApi({
       query: () => createRequest("/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=200&page=1&sparkline=false&locale=en"),
     }),
     getCoinDetails: builder.query({
-      query: (id) => createRequest(`/coins/${id}?localization=false&sparkline=true`),
+      query: (id) => createRequest(`/coins/${id}?localization=false&sparkline=true&tickers=false`),
+    }),
+    getChartData: builder.query({
+      query: (id) => createRequest(`/coins/${id}/market_chart?vs_currency=usd&days=30&interval=daily`),
     }),
   }),
 });
 
 
-export const {useGetGlobalQuery,useGetCoinsQuery,useGetCoinDetailsQuery}=cryptoApi
+export const {useGetGlobalQuery,useGetCoinsQuery,useGetCoinDetailsQuery, useGetChartDataQuery}=cryptoApi
