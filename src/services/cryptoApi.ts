@@ -18,10 +18,9 @@ export const cryptoApi = createApi({
         ),
     }),
     getSelectedCoins: builder.query({
-      query: (coins:string[]) =>
-        createRequest(
+      query: (coins:string[]) => coins.length>0?  createRequest(
           `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coins.map(coin=>coin+",")}&order=market_cap_desc&page=1&sparkline=false&locale=en`
-        ),
+        ):"",
     }),
     getCoinDetails: builder.query({
       query: (id) =>
