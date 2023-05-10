@@ -6,7 +6,6 @@ import Stats from "./Stats"
 const Home = () => {
     const { data } = useGetGlobalQuery({})
     const globalStats: any = data?.data
-    console.log(formatNumber(data?.data.total_market_cap.usd))
     return (
     <div className={`w-full lg:justify-between lg:flex `}>
         <div className="lg:w-1/2 w-full flex flex-col items-center">
@@ -17,7 +16,7 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center items-center w-full lg:w-1/2 ">
-            <img src={cimg} alt="" className=" w-full " />
+            <img src={cimg} alt="" className=" w-full max-w-7xl" />
         </div>
     </div>);
 }

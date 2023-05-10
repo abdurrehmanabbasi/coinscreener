@@ -9,10 +9,8 @@ import { removeCoin } from "../../services/watchlistSlice";
 const Watchlist = () => {
     //Example Watchlist
     const watchlist = useSelector((state:RootState) => state.watchlist)
-    console.log(watchlist)
     const dispatch=useDispatch()
     const { data, isSuccess } = useGetSelectedCoinsQuery(watchlist)
-    console.log(data)
     return (<div className="flex ">
         {
         watchlist.length>0?
