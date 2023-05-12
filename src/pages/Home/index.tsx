@@ -1,6 +1,5 @@
 import cimg from "../../assets/cimg.png"
 import { useGetGlobalQuery } from "../../services/cryptoApi"
-import formatNumber from "../../utils/formatNumber"
 import Stats from "./Stats"
 
 const Home = () => {
@@ -12,11 +11,10 @@ const Home = () => {
             <Stats title="Total Coins : " value={globalStats?.active_cryptocurrencies} />
             <Stats title="Total Exchanges: " value={globalStats?.markets} />
             <Stats title="Total Market Cap: " value={globalStats?.total_market_cap.usd} />
-
         </div>
 
         <div className="flex justify-center items-center w-full lg:w-1/2 ">
-            <img src={cimg} alt="" className=" w-full max-w-7xl" />
+            <img src={cimg} alt="" className=" w-full max-w-7xl" loading="lazy" />
         </div>
     </div>);
 }

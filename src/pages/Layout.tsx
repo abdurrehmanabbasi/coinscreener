@@ -1,34 +1,37 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { UserIcon } from '@heroicons/react/24/solid'
-import { Bars3Icon } from '@heroicons/react/20/solid';
+import { useState } from 'react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 
 
 const Layout = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="flex flex-col min-h-screen bg-slate-800 text-white">
-      <header className="flex justify-between items-center sticky top-0 bg-slate-800">
-        <Bars3Icon className='block md:hidden w-12 px-2 text-sky-500' />
-
-        <div className=" px-4 py-4">
-          <h1 className=" border-l-4 border-b-4 border-sky-500 px-1 text-2xl font-mono font-bold text-cyan-500"><span className='text-3xl'>C</span>oinScreener</h1>
+      <header className="flex flex-col md:flex-row justify-between w-full p-2">
+        <div className="flex justify-between p-2">
+          <h2 className='text-3xl font-mono border-b-4 border-sky-600'>COINSCREEN</h2>
+          <button name="menubtn" className='md:hidden block ' onClick={() => { setIsMenuOpen(!isMenuOpen) }}>
+            {!isMenuOpen ? <Bars3Icon className='w-6' /> :
+              <XMarkIcon className='w-6' />
+            }
+          </button>
         </div>
-        <nav className='hidden md:flex font-thin px-4 py-2 gap-x-2 '>
+
+        <nav className={`p-3 font-mono text-lg md:flex items-center ${isMenuOpen ? 'flex flex-col' : 'hidden'} `}>
           <NavLink to={"/"} className={({ isActive }) => `p-2 rounded-md ${isActive ? 'bg-sky-500' : ''} `}>Home</NavLink>
           <NavLink to={"/coins"} className={({ isActive }) => `p-2 rounded-md ${isActive ? 'bg-sky-500' : ''} `}>Market</NavLink>
           <NavLink to={"/watchlist"} className={({ isActive }) => `p-2 rounded-md ${isActive ? 'bg-sky-500' : ''} `}>Watchlist</NavLink>
           <NavLink to={"/about"} className={({ isActive }) => `p-2 rounded-md ${isActive ? 'bg-sky-500' : ''} `}>About</NavLink>
 
         </nav>
-
-        <div className='px-4 flex items-center'>
-        </div>
+        <div></div>
       </header>
       <main className="flex-grow container mx-auto px-4 py-4">
         <Outlet />
       </main>
       <footer className="">
         <div className="container mx-auto px-4 py-4">
-          <p className="text-sm">&copy; {new Date().getFullYear()} My App</p>
         </div>
       </footer>
     </div>

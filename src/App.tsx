@@ -1,15 +1,19 @@
 import { Routes,Route } from "react-router-dom"
-import Layout from "./pages/Layout"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Coins from "./pages/Coins"
-import Coin from "./pages/Coin"
-import Watchlist from "./pages/Watchlist"
 
-// const url = "wss://stream.binance.com:9443/ws/!miniTicker@arr"
+import { Suspense, lazy } from "react"
+
+const Layout = lazy(()=>import ('./pages/Layout'))
+const Home = lazy(()=>import ('./pages/Home'))
+const About = lazy(()=>import ('./pages/About'))
+const Coins = lazy(()=>import ('./pages/Coins'))
+const Coin = lazy(()=>import ('./pages/Coin'))
+const Watchlist = lazy(()=>import ('./pages/Watchlist'))
+
+
 const App = () => {
 
   return (
+    <Suspense fallback={<div>...Loading</div>}>
     <Routes>
       <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>}/>
@@ -20,6 +24,7 @@ const App = () => {
         <Route path="/about" element={<About/>}/>
       </Route>
     </Routes>
+    </Suspense>
   )
 }
 
