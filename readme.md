@@ -4,7 +4,10 @@ Coinscreener is a ReactJS-based app that allows users to view live and historica
 ## Installation
 To install Coinscreener, you need to have Node.js and NPM installed on your computer. Once you have these installed, you can follow these steps:
 
-* Clone the repository using git clone https://github.com/[username]/coinscreener.git.
+* Clone the repository using git clone 
+```
+ https://github.com/abdurrehmanabbasi/coinscreener.git.
+ ```
 * Navigate to the project directory using the terminal or command prompt.
 * Run npm install to install all the necessary dependencies.
 * Run npm dev to start the development server.
