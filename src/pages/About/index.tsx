@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div className="flex flex-col font-thin gap-4 mt-10">
+        <div className="flex flex-col font-thin gap-2 mt-10 text-justify">
             <p>            In recent years, cryptocurrencies have become increasingly popular and have taken the world by storm. As the number of cryptocurrencies continues to grow, it has become difficult to keep up with their fluctuating prices and market trends. This is where the Coinscreener app comes in handy.</p>
 
             <p>           Coinscreener is an innovative app that allows users to view live and historical data for a vast array of cryptocurrencies. It provides real-time updates on price changes, market cap, trading volume, and other vital information related to cryptocurrencies. This information is essential for investors and traders who need to make informed decisions when buying or selling digital currencies.</p>

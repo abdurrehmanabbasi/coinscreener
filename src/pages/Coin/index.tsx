@@ -16,12 +16,12 @@ const Coin = () => {
             <div className="flex flex-col items-center justify-center min-h-screen">
                 <Loading /></div>}
 
-        <div className="flex mt-10">
-            <div className="w-1/2 mt-10">
+        <div className="md:flex mt-10">
+            <div className="md:w-1/2 w-full mt-10">
                 <p className="font-bold underline">7 Day Market Data Chart</p>
                 <LineChart id={id as string} />
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-full ">
                 <p className="font-bold underline">Description</p>
                 {parse('<p class="[&>a]:underline">'+data?.description.en+'</p>' )}
             </div>
