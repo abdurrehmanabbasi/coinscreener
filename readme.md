@@ -1,5 +1,10 @@
+
 # Coinscreener
 Coinscreener is a ReactJS-based app that allows users to view live and historical data for a vast array of cryptocurrencies. The app uses the Coingecko API for the backend and features a user-friendly interface, a watchlist feature, and historical data tracking.
+
+## Screenshot
+![App Screenshot](https://github.com/abdurrehmanabbasi/coinscreener/blob/master/coinscreengif.gif)
+
 
 ## Installation
 To install Coinscreener, you need to have Node.js and NPM installed on your computer. Once you have these installed, you can follow these steps:
